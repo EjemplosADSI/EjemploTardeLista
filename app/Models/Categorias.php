@@ -63,7 +63,7 @@ class Categorias extends AbstractDBConnection implements \App\Interfaces\Model
      */
     public function getNombres(): string
     {
-        return $this->nombres;
+        return ucfirst($this->nombres);
     }
 
     /**
@@ -71,7 +71,7 @@ class Categorias extends AbstractDBConnection implements \App\Interfaces\Model
      */
     public function setNombres(string $nombres): void
     {
-        $this->nombres = $nombres;
+        $this->nombres = strtolower($nombres);
     }
 
     /**

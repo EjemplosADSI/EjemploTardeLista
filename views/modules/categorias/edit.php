@@ -1,7 +1,7 @@
 <?php
 require("../../partials/routes.php");
-// require_once("../../partials/check_login.php");
-// require("../../../app/Controllers/CategoriasController.php");
+require_once("../../partials/check_login.php");
+require("../../../app/Controllers/CategoriasController.php");
 
 use App\Controllers\CategoriasController;
 use App\Models\Categorias;
@@ -88,29 +88,29 @@ $frmSession = $_SESSION['frm'.$pluralModel] ?? NULL;
                                                 <label for="nombres" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
                                                     <input required type="text" class="form-control" id="nombres"
-                                                           name="nombres" value="<?= $DataCategoria->getNombre(); ?>"
+                                                           name="nombres" value="<?= $DataCategoria->getNombres(); ?>"
                                                            placeholder="Ingrese el nombres">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="orden" class="form-control select2bs4 select2-info"> Orden</label>
+                                                <label for="orden" class="col-sm-2 col-form-label"> Orden</label>
                                                 <div class="col-sm-10">
                                                     <select id="orden" name="orden"
-                                                            class="custom-select">
-                                                        <option <?= ($DataCategoria->getTipoDocumento() == "1") ? "selected" : ""; ?>
+                                                            class="custom-select form-control select2bs4 select2-info">
+                                                        <option <?= ($DataCategoria->getOrden() == "1") ? "selected" : ""; ?>
                                                                 value="1">Primero
                                                         </option>
-                                                        <option <?= ($DataCategoria->getTipoDocumento() == "2") ? "selected" : ""; ?>
+                                                        <option <?= ($DataCategoria->getOrden() == "2") ? "selected" : ""; ?>
                                                                 value="2">Segundo
                                                         </option>
-                                                        <option <?= ($DataCategoria->getTipoDocumento() == "3") ? "selected" : ""; ?>
+                                                        <option <?= ($DataCategoria->getOrden() == "3") ? "selected" : ""; ?>
                                                                 value="3">Tercero
                                                         </option>
-                                                        <option <?= ($DataCategoria->getTipoDocumento() == "4") ? "selected" : ""; ?>
+                                                        <option <?= ($DataCategoria->getOrden() == "4") ? "selected" : ""; ?>
                                                                 value="4">Cuarto
                                                         </option>
-                                                        <option <?= ($DataCategoria->getTipoDocumento() == "5") ? "selected" : ""; ?>
+                                                        <option <?= ($DataCategoria->getOrden() == "5") ? "selected" : ""; ?>
                                                                 value="5">Quinto
                                                         </option>
                                                     </select>

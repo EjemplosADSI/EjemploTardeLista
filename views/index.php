@@ -1,5 +1,5 @@
 <?php require("partials/routes.php"); ?>
-<?php // require("partials/check_login.php"); ?>
+<?php require("partials/check_login.php"); ?>
 
 <!DOCTYPE html>
 <html>
